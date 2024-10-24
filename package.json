@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "mocha --exit",
+    "start": "node marvel/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "body-parser": "^1.20.3",
     "chai": "^5.1.2",
     "chai-http": "^5.1.1",
     "express": "^4.21.1",
