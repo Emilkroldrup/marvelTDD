@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --exit",
+    "test": "mocha ./marvel/tests/heroes.test.js --exit",
     "start": "node marvel/server.js"
   },
   "keywords": [],
@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "body-parser": "^1.20.3",
-    "chai": "^5.1.2",
-    "chai-http": "^5.1.1",
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
     "express": "^4.21.1",
-    "mocha": "^10.7.3",
+    "mocha": "^8.4.0",
     "nodemon": "^3.1.7"
   }
 }
