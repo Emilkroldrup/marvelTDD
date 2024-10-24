@@ -78,21 +78,21 @@ describe('Heroes API', () => {
         });
     });
 
-    it('should not POST a hero without required fields', (done) => {
+  it('should not POST a hero without required fields', (done) => {
       const newHero = {
-        id: 7,
-        alias: "Unknown Hero"
+          id: 7,
+          alias: "Unknown Hero"
       };
 
       chai.request(server)
-        .post('/heroes')
-        .send(newHero)
-        .end((err, res) => {
-          res.should.have.status(400);
-          res.body.should.have.property('message').eql('Name and powers are required');
-          done();
-        });
-    });
+          .post('/heroes')
+          .send(newHero)
+          .end((err, res) => {
+              res.should.have.status(400);
+              res.body.should.have.property('message').eql('Name, alias, and powers are required');
+              done();
+          });
+      });
   });
 
   /**

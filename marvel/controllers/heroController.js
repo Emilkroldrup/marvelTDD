@@ -14,7 +14,13 @@ const getHeroById = (req, res) => {
 };
 
 const createHero = (req, res) => {
-    const newHero = req.body;
+    const { name, alias, powers } = req.body;
+
+    if (!name || !alias || !powers || powers.length === 0) {
+        return res.status(400).json({ message: 'Name, alias, and powers are required' });
+    }
+
+    const newHero = { id: heroes.length + 1, name, alias, powers };
     heroes.push(newHero);
     res.status(201).json(newHero);
 };
