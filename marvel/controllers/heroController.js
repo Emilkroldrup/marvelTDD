@@ -1,5 +1,6 @@
 const heroes = require('../heroes.json');
 
+
 const getHeroes = (req, res) => {
     res.status(200).json(heroes);
 };
@@ -24,6 +25,7 @@ const createHero = (req, res) => {
     heroes.push(newHero);
     res.status(201).json(newHero);
 };
+
 
 const updateHero = (req, res) => {
     const heroId = parseInt(req.params.id);
@@ -50,6 +52,4 @@ const deleteHero = (req, res) => {
     }
 };
 
-
-// Similarly, implement updateHero and deleteHero
-module.exports = { getHeroes, getHeroById, createHero, updateHero, deleteHero};
+module.exports = { getHeroes, getHeroById, createHero, updateHero, deleteHero };
